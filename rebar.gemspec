@@ -9,8 +9,6 @@ Gem::Specification.new do |s|
   s.description = ''
   s.license     = 'MIT'
 
-  s.required_ruby_version = '>= 1.9.2'
-
   s.author        = 'Paul Rosania'
   s.email         = 'paul.rosania@gmail.com'
   s.homepage      = "https://github.com/paulrosania/rebar"
