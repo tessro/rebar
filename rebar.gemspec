@@ -20,6 +20,5 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path  = 'lib'
 
-  s.add_runtime_dependency('redis',           '>= 2.2')
-  s.add_runtime_dependency('redis-namespace', '>= 1.1')
+  s.add_runtime_dependency('redis', '>= 2.2')
 end
