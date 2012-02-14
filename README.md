@@ -59,6 +59,9 @@ More documentation to follow. For now, here's some sample code.
       strings(10)
     end
 
+By default, Rebar cleans the `rebar` namespace before it builds a dataset. To
+disable this behavior, pass `:clean => false` when you call `Rebar.build`.
+
 ## Contributing
 
 1. Fork it
