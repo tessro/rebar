@@ -16,25 +16,25 @@ module Rebar
 
       def hashes(count, &block)
         count.times do
-          Rebar::DSL::Hash.new(connection, "rebar:hash:#{next_id(:hash)}").instance_eval(&block)
+          Rebar::DSL::Hash.new(connection, "rebar:hash:#{next_id(:hash)}", &block)
         end
       end
 
       def lists(count, &block)
         count.times do
-          Rebar::DSL::List.new(connection, "rebar:list:#{next_id(:list)}").instance_eval(&block)
+          Rebar::DSL::List.new(connection, "rebar:list:#{next_id(:list)}", &block)
         end
       end
 
       def sets(count, &block)
         count.times do
-          Rebar::DSL::Set.new(connection, "rebar:set:#{next_id(:set)}").instance_eval(&block)
+          Rebar::DSL::Set.new(connection, "rebar:set:#{next_id(:set)}", &block)
         end
       end
 
       def sorted_sets(count, &block)
         count.times do
-          Rebar::DSL::SortedSet.new(connection, "rebar:sorted_set:#{next_id(:sorted_set)}").instance_eval(&block)
+          Rebar::DSL::SortedSet.new(connection, "rebar:sorted_set:#{next_id(:sorted_set)}", &block)
         end
       end
 
