@@ -19,6 +19,14 @@ module Rebar
       @system_cpu_time = connection.info['used_cpu_sys'].to_i  - initial_cpu_sys
       @user_cpu_time   = connection.info['used_cpu_user'].to_i - initial_cpu_user
       @memory_delta    = connection.info['used_memory'].to_i   - initial_memory
+
+      self
+    end
+
+    def report
+      STDERR.puts "System CPU:   \t#{system_cpu_time}s"
+      STDERR.puts "User CPU:     \t#{user_cpu_time}s"
+      STDERR.puts "Memory delta: \t#{memory_delta} bytes"
     end
 
     def clean!
